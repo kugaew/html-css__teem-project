@@ -7,12 +7,25 @@ a {
   height: 502px;
 }
 
+.hero__span {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1.15;
+  display: block;
+}
+
 .hero__title {
   color: #d41443;
   width: 218px;
-  margin-top: 136px;
+  padding-top: 194px;
   margin-bottom: 20px;
-  //   @include fonts('Titan One', 400, 26px, 1.15, 0.04em);
+
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .hero__list {
@@ -26,14 +39,24 @@ a {
   margin-right: 8px;
 }
 
-.hero__span {
-  color: #ffffff;
-}
-
 .hero__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 24px;
   border-radius: 20px;
   border-style: none;
   width: 61.2px;
-  background-color: FFFFFF;
+  background-color: #ffffff;
+
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  color: #d41443;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #d41443;
+  }
 }
