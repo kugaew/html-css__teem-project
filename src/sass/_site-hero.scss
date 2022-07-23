@@ -2,10 +2,13 @@ a {
   text-decoration: none;
 }
 
+.hero {
+  position: relative;
+}
+
 .hero-section {
   background-color: #ffb8ca;
   height: 502px;
-  position: relative;
   @media screen and (min-width: 768px) {
     height: 334px;
   }
@@ -134,9 +137,10 @@ a {
     position: absolute;
     display: block;
     margin-top: 16px;
-    margin-right: 42px;
+    margin-right: 32px;
     top: 0;
     right: 0;
+    z-index: 2;
     &__number {
       font-family: 'Titan One';
       font-weight: 400;
@@ -161,7 +165,7 @@ a {
   }
   @media screen and (min-width: 1200px) {
     margin-top: 68px;
-    margin-right: 56px;
+    margin-right: 37px;
     &__number {
       font-size: 46px;
       line-height: 1.15;
