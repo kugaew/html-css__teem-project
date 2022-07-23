@@ -19,7 +19,12 @@
     --simple-text-font-weight-medium: 500;
     --simple-text-font-weight-small: 400;
 
-    --mobile-break-point: 320px;
+    /* --mobile-break-point: 320px;
     --tablet-break-point: 768px;
-    --desktop-break-point: 1200px;
+    --desktop-break-point: 1200px; */
+
+   
 }
+ $mobile-break-point: 320px;
+ $tablet-break-point: 768px;
+ $desktop-break-point: 1200px;
