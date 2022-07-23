@@ -7,3 +7,41 @@
 
     color: $font-color;
 }
+
+@mixin mobile {
+    @media screen and (min-width: var(--mobile-break-point)) {
+        @content;
+    }
+}
+
+@mixin teblet {
+    @media screen and (min-width: var(--tablet-break-point)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: var(--desktop-break-point)) {
+        @content;
+    }
+}
+
+@mixin retina {
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@mixin notretina {
+
+    @media (min-device-pixel-ratio: 1),
+    (-webkit-min-device-pixel-ratio: 1),
+    (min-resolution: 96dpi),
+    (min-resolution: 1dppx) {
+        @content;
+    }
+}
