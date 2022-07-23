@@ -1,4 +1,4 @@
-@mixin fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, ) {
+@mixin fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $font-color) {
     font-family: $font-family;
     font-weight: $font-weight;
     font-size: $font-size;
@@ -6,4 +6,42 @@
     letter-spacing: $letter-spacing;
 
     color: $font-color;
+}
+
+@mixin mobile {
+    @media screen and (min-width: $mobile-break-point) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-break-point) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-break-point) {
+        @content;
+    }
+}
+
+@mixin retina {
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@mixin notretina {
+
+    @media (min-device-pixel-ratio: 1),
+    (-webkit-min-device-pixel-ratio: 1),
+    (min-resolution: 96dpi),
+    (min-resolution: 1dppx) {
+        @content;
+    }
 }
