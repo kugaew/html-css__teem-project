@@ -1,16 +1,28 @@
 .site-gallery__section {
   min-height: 196px;
   padding-bottom: 0;
-  background-image: linear-gradient(to bottom, #fff5f6 87px, #fff 87px);
+  background-image: linear-gradient(
+    to bottom,
+    #fff5f6 87px,
+    var(--main-background-color) 87px
+  );
 
   @media screen and (min-width: 768px) {
     min-height: 391px;
-    background-image: linear-gradient(to bottom, #fff5f6 251px, #fff 251px);
+    background-image: linear-gradient(
+      to bottom,
+      #fff5f6 251px,
+      var(--main-background-color) 251px
+    );
   }
 
   @media screen and (min-width: 1200px) {
     min-height: 549px;
-    background-image: linear-gradient(to bottom, #fff5f6 209px, #fff 209px);
+    background-image: linear-gradient(
+      to bottom,
+      #fff5f6 209px,
+      var(--main-background-color) 209px
+    );
   }
 }
 
