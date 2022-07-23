@@ -1,0 +1,23 @@
+.site-gallery__section {
+  min-height: 196px;
+  padding-bottom: 0;
+  background-image: linear-gradient(to bottom, #fff5f6 87px, #fff 87px);
+
+  @media screen and (min-width: 768px) {
+    min-height: 391px;
+    background-image: linear-gradient(to bottom, #fff5f6 251px, #fff 251px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 549px;
+    background-image: linear-gradient(to bottom, #fff5f6 209px, #fff 209px);
+  }
+}
+
+.site-gallery__container {
+  padding: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 93px;
+  }
+}
