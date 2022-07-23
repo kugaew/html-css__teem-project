@@ -1,5 +1,5 @@
 :root {
-    --main-background-color: #E5E5E5;
+    --main-background-color: #ffffff;
     
     --title-text-color: #D41443;
     --title-before-text-color: #FFA5BA;
@@ -9,7 +9,7 @@
     --action-menu-text-color: #D41443;
     --menu-text-color: #FFFFFF;
 
-    --font-stile: 'normal';
+    --font-style: 'normal';
 
     --titles-font-family: 'Titan One'
     --titles-font-weight: 400;
@@ -18,8 +18,7 @@
     --simple-text-font-weight-big: 700;
     --simple-text-font-weight-medium: 500;
     --simple-text-font-weight-small: 400;
-
-    --mobile-break-point: 320px;
-    --tablet-break-point: 768px;
-    --desktop-break-point: 1200px;
 }
+ $mobile-break-point: 320px;
+ $tablet-break-point: 768px;
+ $desktop-break-point: 1200px;
