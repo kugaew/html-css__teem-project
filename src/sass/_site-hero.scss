@@ -1,5 +1,10 @@
 a {
   text-decoration: none;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
 }
 
 .section {
@@ -51,6 +56,10 @@ a {
   line-height: 0.95;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  @media screen and (max-width: 771px) {
+    position: absolute;
+    z-index: 3;
+  }
   @media screen and (min-width: 772px) {
     width: 162px;
     margin-left: 32px;
@@ -63,20 +72,25 @@ a {
     font-size: 58px;
     line-height: 0.89;
     padding-top: 60px;
-    margin-left: 56px;
+    margin-left: 16px;
   }
 }
 
 .hero__list {
   display: flex;
   margin-bottom: 158px;
+  @media screen and (max-width: 771px) {
+    position: absolute;
+    z-index: 3;
+    top: 262px;
+  }
   @media screen and (min-width: 772px) {
     margin-left: 32px;
     margin-bottom: 0;
   }
   @media screen and (min-width: 1200px) {
     margin-bottom: 40px;
-    margin-left: 56px;
+    margin-left: 16px;
     width: 255px;
   }
 }
@@ -101,12 +115,9 @@ a {
   font-weight: 400;
   font-size: 8px;
   line-height: 10px;
-  color: #ffffff;
-
   &:hover,
   &:focus {
     background-color: #ffffff;
-    color: #d41443;
   }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -137,6 +148,11 @@ a {
     font-size: 8px;
     line-height: 1.5;
   }
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    z-index: 3;
+    bottom: 81px;
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 229px;
     margin-top: 108px;
@@ -160,6 +176,10 @@ a {
     width: 18px;
     height: 18px;
   }
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    bottom: 56px;
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 229px;
     margin-top: 20px;
@@ -178,7 +198,7 @@ a {
   display: none;
   @media screen and (min-width: 772px) {
     display: flex;
-    margin-top: -260px;
+    margin-top: -126px;
     flex-direction: column;
   }
   @media screen and (min-width: 1200px) {
@@ -194,6 +214,7 @@ a {
     margin-left: auto;
     margin-right: 32px;
     margin-bottom: 16px;
+    z-index: 3;
   }
 }
 
@@ -222,5 +243,112 @@ a {
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.28;
+  }
+}
+
+.hero-img-ice {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  z-index: 1;
+  width: 171px;
+  height: 410px;
+  @media screen and (min-width: 772px) {
+    width: 143px;
+    height: 336px;
+    bottom: 0;
+    right: 303px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 236px;
+    height: 557px;
+    right: 328px;
+  }
+}
+
+.hero-img-circle {
+  position: absolute;
+  right: 0;
+  @media screen and (min-width: 772px) {
+    width: 335px;
+    height: 333px;
+    right: 185px;
+    bottom: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 534px;
+    height: 534px;
+    right: 149px;
+  }
+}
+
+.hero-white-circle {
+  display: none;
+  @media screen and (min-width: 772px) {
+    display: block;
+    position: absolute;
+    top: -4px;
+    right: 38px;
+    width: 16px;
+    height: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 30px;
+    height: 30px;
+    right: 32px;
+    top: 68px;
+  }
+}
+
+.hero-white-circle-second {
+  display: none;
+  @media screen and (min-width: 772px) {
+    display: block;
+    position: absolute;
+    top: 56px;
+    right: 38px;
+    width: 16px;
+    height: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 30px;
+    height: 30px;
+    right: 32px;
+    top: 160px;
+  }
+}
+
+.hero-img-bioeco {
+  display: none;
+  @media screen and (min-width: 772px) {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    left: 32px;
+    width: 152px;
+    height: 154px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 213px;
+    height: 216px;
+    left: 16px;
+    bottom: 49px;
+  }
+}
+
+.hero-img-girl {
+  display: none;
+  @media screen and (min-width: 772px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+    width: 190px;
+    height: 150px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 304px;
+    height: 241px;
+    right: 16px;
   }
 }
