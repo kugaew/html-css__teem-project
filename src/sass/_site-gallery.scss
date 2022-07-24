@@ -1,54 +1,48 @@
 .site-gallery__section {
-  min-height: 196px;
-  padding-bottom: 0;
+  padding-top: 0;
   background-image: linear-gradient(
     to bottom,
-    #fff5f6 87px,
-    var(--main-background-color) 87px
+    #fff5f6 23%,
+    var(--main-background-color) 23%
   );
 
-  @media screen and (min-width: 768px) {
-    min-height: 391px;
+  @media screen and (min-width: $tablet-break-point) {
     background-image: linear-gradient(
       to bottom,
-      #fff5f6 251px,
-      var(--main-background-color) 251px
+      #fff5f6 26%,
+      var(--main-background-color) 26%
     );
   }
 
-  @media screen and (min-width: 1200px) {
-    min-height: 549px;
+  @media screen and (min-width: $desktop-break-point) {
     background-image: linear-gradient(
       to bottom,
-      #fff5f6 209px,
-      var(--main-background-color) 209px
+      #fff5f6 29%,
+      var(--main-background-color) 29%
     );
-  }
-}
-
-.site-gallery__container {
-  padding: 0;
-
-  @media screen and (min-width: 1200px) {
-    padding: 0 93px;
   }
 }
 
 .gallery {
   display: grid;
   grid-gap: 2px;
-  grid: repeat(12, 8.5px) / repeat(28, 8.5px);
+  grid: repeat(12, 9px) / repeat(28, 9px);
   justify-content: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-break-point) {
     grid-gap: 4px;
-    grid: repeat(12, 18px) / repeat(28, 18px);
+    grid: repeat(12, 22px) / repeat(28, 22px);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-break-point) {
     grid-gap: 6px;
-    grid: repeat(12, 30px) / repeat(28, 30px);
+    grid: repeat(12, 36px) / repeat(28, 36px);
   }
+}
+
+.gallery__item:hover,
+.gallery__item:focus {
+  z-index: 3;
 }
 
 .gallery__item:nth-child(1) {
@@ -96,4 +90,19 @@
   width: 100%;
   height: auto;
   display: block;
+
+  .gallery__item & {
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gallery__item:hover &,
+  .gallery__item:focus & {
+    transform: scale(1.2);
+  }
+
+  .gallery__item--big:hover &,
+  .gallery__item--big:focus & {
+    transform: scale(1.1);
+  }
 }
