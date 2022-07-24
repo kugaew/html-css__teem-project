@@ -7,10 +7,8 @@ ul {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.container {
+.product-container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 
@@ -22,53 +20,48 @@ ul {
 
     @media screen and (min-width: 772px) {
         max-width: 771px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     @media screen and (min-width: 1200px) {
         max-width: 1199px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
 // product titles
 .product-label {
-    font-size: 18px;
-    line-height: 1.16;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgba(255, 165, 186, 1);
-    margin-bottom: 15px;
-        @media screen and (min-width: 772px) {
-            margin-bottom: 18px;
-            font-size: 26px;
-            line-height: 1.15;
-        }
-            @media screen and (min-width: 1200px) {
-            margin-bottom: 16px;
-            font-size: 30px;
-            line-height: 1.13;
-        }
+    @include fonts('Titan One', 400, 16px, 1.16, null, rgba(255, 165, 186, 1));
+        margin-bottom: 15px;
+        text-align: center;
+        text-transform: uppercase;
+    @include tablet {
+        @include fonts (null, null, 26px, 1.15, null, null);
+        margin-bottom: 18px;
+    }
+    @include desktop {
+        @include fonts (null, null, 30px, 1.13, null, null);
+        margin-bottom: 16px;
+    }
 }
 
 .product-main-title {
-    font-size: 34px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: rgba(212, 20, 67, 1);
-    margin-bottom: 148px;
-    @media screen and (min-width: 772px) {
-        font-size: 48px;
-        line-height: 1.45;
-        margin-bottom: 158px;
-    }
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-        line-height: 1.37;
-        margin-bottom: 281px;
-    }
+    @include fonts('Titan One', 400, 34px, 1.15, 0.04em, rgba(212, 20, 67, 1));
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 148px;
+    
+        @include tablet {
+            @include fonts (null, null, 48px, 1.45, null, null);
+            margin-bottom: 158px;
+        }
+    
+        @include desktop {
+            @include fonts (null, null, 58px, 1.37, null, null);
+            margin-bottom: 281px;
+        }
 }
 
 // product ul
@@ -96,14 +89,12 @@ ul {
         margin-bottom: 0;
     }
 }
-.product-full {
-    position: relative;
-}
 
 .product-item {
     background-color: rgba(255, 165, 186, 1);
     padding: 160px 53px 29px 53px;
     border-radius: 24px;
+    position: relative;
     @media screen and (min-width: 772px) {
         padding: 118px 32px 40px 32px;
     }
@@ -120,40 +111,164 @@ ul {
 }
 
 .product-name {
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    margin-bottom: 32px;
-    @media screen and (min-width: 1200px) {
-        font-size: 30px;
-        line-height: 1.13;
-    }
+    @include fonts('Titan One', 400, 20px, 1.15, 0.04em, rgba(255, 255, 255, 1));
+        margin-bottom: 32px;
+        text-align: center;
+        text-transform: uppercase;
+
+    @include desktop {
+            @include fonts (null, null, 30px, 1.13, null, null);
+        }
 }
 
+.product-item::before {
+    display: block;
+    content: "";
+    width: 280px;
+    height: 280px;
+    background-image: url(../images/products/product-ice-cream-mobile-min.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include tablet {
+            width: 224px;
+            height: 224px;
+            background-image: url(../images/products/product-ice-cream-tablet-min.png);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                .box {
+                    background-image: url(../images/products/product-ice-cream-tablet@2x-min.png);
+                }
+            }
+            top: -32px
+        }
+        @include desktop {
+            width: 368px;
+            height: 394px;
+            background-image: url(../images/products/product-ice-cream-desktop-min.png);
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                .box {
+                    background-image: url(../images/products/product-ice-cream-desktop@2x-min.png);
+                }
+            }
+        }
+}
+
+.product-item:nth-child(2)::before {
+    display: block;
+    content: "";
+    width: 280px;
+    height: 280px;
+    background-image: url(../images/products/product-ice-coffee-mobile-min.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .box {
+                background-image: url(../images/products/product-ice-coffee-mobile@2x-min.png);
+            }
+        }
+    @include tablet {
+            width: 224px;
+            height: 224px;
+            background-image: url(../images/products/product-ice-coffee-tablet-min.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    .box {
+                        background-image: url(../images/products/product-ice-coffee-tablet@2x-min.png);
+                    }
+                }
+            top: -32px
+        }
+    @include desktop {
+            width: 368px;
+            height: 394px;
+            background-image: url(../images/products/product-ice-coffee-desktop-min.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    .box {
+                        background-image: url(../images/products/product-ice-coffee-desktop@2x-min.png);
+                    }
+                }
+            top: -66px
+        }    
+}
+.product-item:nth-child(3)::before {
+    display: block;
+    content: "";
+    width: 280px;
+    height: 280px;
+    background-image: url(../images/products/product-milkshake-mobile-min.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        @include tablet {
+            width: 224px;
+            height: 224px;
+            background-image: url(../images/products/product-milkshake-tablet-min.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    .box {
+                        background-image: url(../images/products/product-milkshake-tablet@2x-min.png);
+                    }
+                }
+            top: -32px
+        }
+    @include desktop {
+            width: 368px;
+            height: 394px;
+            background-image: url(../images/products/product-milkshake-desktop-min.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    .box {
+                        background-image: url(../images/products/product-milkshake-desktop@2x-min.png);
+                    }
+                }
+        }
+}
 .product-description::before {
     display: block;
     content: "";
     width: 100%;
     height: 6px;
-    background-image: url(../images/dots.svg);
+    background-image: url(../images/products/three-dots-icon.svg);
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
 }
 
 .product-description {
-    font-size: 14px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 1);
-    margin-bottom: 33px;
-    @media screen and (min-width: 772px) {
-        line-height: 1.76;
-    }
+    @include fonts('DM Sans', 700, 14px, 1.15, 0.04em, rgba(255, 255, 255, 1));
+        margin-bottom: 32px;
+        text-align: center;
+
+    @include tablet {
+        @include fonts (null, null, null, 1.76, null, null);
+        margin-bottom: 33px;
+        }
+    @include desktop {
+        margin-bottom: 60px;
+        }
+
 }
 
 
