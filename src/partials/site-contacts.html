@@ -22,13 +22,13 @@
           </li>
         </ul>
         <ul class="contacts__contact">
-          <li class="contacts__tel">
-            <a class="contacts__tel-link link" href="tel:+610383766284"
+          <li class="contacts__contact-item">
+            <a class="contacts__contact-link" href="tel:+610383766284"
               >+61(0) 383 766 284</a
             >
           </li>
-          <li class="contacts__mail">
-            <a class="contacts__mail-link link" href="mailto:noreply@envato.com"
+          <li class="contacts__contact-item">
+            <a class="contacts__contact-link" href="mailto:noreply@envato.com"
               >noreply@envato.com</a
             >
           </li>
@@ -54,11 +54,15 @@
           </li>
         </ul>
         <ul class="contacts__contact">
-          <li class="contacts__tel">
-            <a href="tel:+610383766284">+61(0) 383 766 284</a>
+          <li class="contacts__contact-item">
+            <a class="contacts__contact-link" href="tel:+610383766284"
+              >+61(0) 383 766 284</a
+            >
           </li>
-          <li class="contacts__mail">
-            <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+          <li class="contacts__contact-item">
+            <a class="contacts__contact-link" href="mailto:noreply@envato.com"
+              >noreply@envato.com</a
+            >
           </li>
         </ul>
       </li>
@@ -82,18 +86,43 @@
           </li>
         </ul>
         <ul class="contacts__contact">
-          <li class="contacts__tel">
-            <a href="tel:+610383766284">+61(0) 383 766 284</a>
+          <li class="contacts__contact-item">
+            <a class="contacts__contact-link" href="tel:+610383766284"
+              >+61(0) 383 766 284</a
+            >
           </li>
-          <li class="contacts__mail">
-            <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+          <li class="contacts__contact-item">
+            <a class="contacts__contact-link" href="mailto:noreply@envato.com"
+              >noreply@envato.com</a
+            >
           </li>
         </ul>
       </li>
     </ul>
     <div class="contacts__buttons">
-      <button type="button">Our Locations</button>
-      <button type="button">Franchise</button>
+      <button class="contacts__btn-first" type="button">
+        Our Locations
+        <svg class="contacts__but-icon" width="3.61" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <button class="contacts__btn-sec" type="button">
+        Franchise
+        <svg class="contacts__but-icon" width="3.61" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+
+        <button class="modal-but" type="button">
+          <svg class="modal-but-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
