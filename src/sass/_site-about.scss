@@ -1,0 +1,202 @@
+.about {
+    background-color: #FFF5F6;
+    background-image: url(../images/about/about-background.jpg);
+    @media screen and (min-width: 320px) {
+        width: 320px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+}
+
+.about-box {
+    position: relative;
+}
+
+.about-pre__title {
+    padding-top: 60px;
+    margin-bottom: 16px;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.13;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFA5BA;
+}
+
+.about__title {
+    margin-bottom: 60px;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #D41443;
+}
+
+.about__cow-milk {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-width: 320px) {
+        width: 280px;
+        height: 279px;
+        background-image: url(../images/about/about-milk-and-cow-mobile-min.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/about/about-milk-and-cow-mobile@2x-min.png)
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+        height: 335px;
+        background-image: url(../images/about/about-milk-and-cow-tablet-min.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/about/about-milk-and-cow-tablet@2x-min.png)
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 501px;
+        height: 501px;
+        background-image: url(../images/about/about-milk-and-cow-desktop-min.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/about/about-milk-and-cow-desktop@2x-min.png)
+        }
+    }
+}
+
+.about__milk-splash {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    min-width: 1200px;
+    height: 521px;
+    margin: 0;
+    background: #FFF5F6;
+}
+
+.about__text {
+    position: absolute;
+
+    @media screen and (min-width: 768px) {
+        top: 319px;
+        left: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 40px;
+        left: 400px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        top: 90px;
+        left: 616px;
+    }
+}
+
+.about-text__desk {
+    @media screen and (min-width: 768px) {
+        min-width: 334px;
+        margin-bottom: 22px;
+    }
+
+    @media screen and (min-width: 768px) {
+        min-width: 220px;
+        margin-bottom: 22px;
+    }
+
+    max-width: 463px;
+    height: 79px;
+    margin-bottom: 32px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+
+.about-text__lead {
+    @media screen and (min-width: 768px) {
+        max-width: 334px;
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 220px;
+    }
+    max-width: 463px;
+    height: 155px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.94;
+    letter-spacing: 0.04em;
+    color: #907E82;
+}
+
+.about-text__tagline {
+    @media screen and (min-width: 768px) {
+        max-width: 334px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 220px;
+    }
+
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.94;
+    letter-spacing: 0.04em;
+    color: #907E82;
+}
+
+.about-btn {
+    @media screen and (max-width: 767px) {
+        margin-top: 20px;
+    }
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-color: transparent;
+    padding-left: 37px;
+    margin-top: 40px;
+    width: 176px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 22px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #D41443;
+}
+
+.about-btn::after {
+    content: "";
+    margin-left: 13.62px;
+    width: 8px;
+    height: 10px;
+    background-image: url(../images/about/read-more-icon.svg);
+}
