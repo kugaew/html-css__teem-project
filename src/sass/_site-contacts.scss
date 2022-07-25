@@ -1,0 +1,350 @@
+.contacts {
+  background-image: linear-gradient(#ffffff 302px, #fff5f6 302px);
+
+  @include tablet {
+    background-image: linear-gradient(#ffffff 298px, #fff5f6 298px);
+  }
+  @include desktop {
+    background-image: linear-gradient(#ffffff 99px, #fff5f6 99px);
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include tablet {
+    gap: 32px;
+  }
+}
+
+.contacts__item {
+  width: 100%;
+  padding: 40px 32px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @include tablet {
+    width: calc((100% - 64px) / 3);
+  }
+  @include desktop {
+    padding: 40px;
+  }
+}
+
+.contacts__category {
+  display: inline;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border-radius: 4px;
+  &.beige {
+    background-color: #f0d1a5;
+  }
+
+  &.green {
+    background-color: #c2e297;
+  }
+  padding: 0 20px;
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.contacts__address {
+  margin-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.contacts__address-city {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: #000000;
+  margin-bottom: 12px;
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.contacts__address-text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+  max-width: 179px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.66;
+    max-width: 158px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.83;
+    max-width: 250px;
+  }
+}
+
+.contacts__work-time {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+
+  @include tablet {
+    margin-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts__day {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #000000;
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.contacts__time {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: var(--title-before-text-color);
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.contacts__first-shift {
+  margin-bottom: 8px;
+
+  @include tablet {
+    margin-bottom: 12px;
+  }
+}
+
+.contacts__contact {
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 32px;
+  }
+}
+
+.contacts__contact-link {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.83;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
+}
+
+.contacts__buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  @include tablet {
+    gap: 14.5px;
+    margin-top: 60px;
+  }
+}
+.contacts__btn-first {
+  margin-left: auto;
+  margin-right: auto;
+  width: 161.45px;
+  height: 44px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  color: var(--main-background-color);
+
+  background-color: #d41342;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  @include tablet {
+    width: 191.45px;
+  }
+
+  @include desktop {
+    width: 198px;
+  }
+}
+
+.contacts__btn-sec {
+  border: none;
+  margin: 0 auto;
+  width: 161px;
+  height: 44px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  color: #d41443;
+  background-color: var(--main-background-color);
+  border-radius: 22px;
+  cursor: pointer;
+  @include tablet {
+    width: 174.05px;
+  }
+  @include desktop {
+    width: 168px;
+  }
+}
+
+.contacts__but-icon {
+  margin-left: 12px;
+
+  .contacts__btn-first & {
+    stroke: var(--main-background-color);
+  }
+  .contacts__btn-sec & {
+    stroke: var(--accent-text-color);
+  }
+}
+
+.contacts-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+.contacts-backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.contacts-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 4;
+  width: 310px;
+  height: 581px;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  overflow: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  .contacts-backdrop.is-hidden & {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  @include tablet {
+    width: 602px;
+    height: 600px;
+  }
+}
+
+.contacts-modal__text {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--accent-text-color);
+  margin-bottom: 12px;
+
+  @include mobile {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    line-height: 1.15;
+  }
+}
+
+.contacts-modal-but {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--accent-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover .modal-but-icon,
+  &:focus .modal-but-icon {
+    fill: var(--main-background-color);
+  }
+}
+
+.contacts-modal__map {
+  width: 270px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.contacts-modal__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
