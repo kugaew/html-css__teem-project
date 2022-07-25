@@ -1,15 +1,16 @@
-.container {
-  outline: 1px solid red;
-}
+// .container {
+//   outline: 1px solid red;
+// }
 
-.footer {
+.footer-box {
   background-color: #fff5f6;
 }
 
-// .footer__block-one {
-// }
+.footer-box__block-one {
+  max-width: 232px;
+}
 
-.footer__logo-first {
+.footer-box__logo-first {
   @include fonts(
     'Titan One',
     var(--titles-font-weight),
@@ -21,9 +22,9 @@
   text-transform: uppercase;
 }
 
-.footer__logo-second {
+.footer-box__logo-second {
   @include fonts(
-    var(--titles-font-family),
+    null,
     var(--titles-font-weight),
     34px,
     1.15,
@@ -31,25 +32,25 @@
     var(--title-text-color)
   );
   text-transform: uppercase;
-  margin: 1px;
+  margin-top: 16px;
 }
 
-// .footer__block-two {
+// .footer-box__block-two {
 // }
 
-// .footer__social-list {
+// .footer-box__social-list {
 // }
 
-// .footer__social-item {
+// .footer-box__social-item {
 // }
 
-// .footer__social-link {
+// .footer-box__social-link {
 // }
 
-// .footer__social-icon {
+// .footer-box__social-icon {
 // }
 
-.footer__phone-text {
+.footer-box__phone-text {
   @include fonts(
     var(--simple-text-font-family),
     var(--simple-text-font-weight-big),
@@ -60,7 +61,7 @@
   );
 }
 
-.footer__phone-number {
+.footer-box__phone-number {
   @include fonts(
     var(--simple-text-font-family),
     var(--simple-text-font-weight-big),
@@ -71,7 +72,7 @@
   );
 }
 
-.footer__copyright {
+.footer-box__copyright {
   @include fonts(
     var(--simple-text-font-family),
     var(--simple-text-font-weight-big),
