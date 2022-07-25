@@ -1,7 +1,84 @@
-.test {
-  color: red;
-}
-
 .container {
   outline: 1px solid red;
 }
+
+.footer {
+  background-color: #fff5f6;
+}
+
+// .footer__block-one {
+// }
+
+.footer__logo-first {
+  @include fonts(
+    'Titan One',
+    var(--titles-font-weight),
+    18px,
+    1.17,
+    null,
+    var(--title-before-text-color)
+  );
+  text-transform: uppercase;
+}
+
+.footer__logo-second {
+  @include fonts(
+    var(--titles-font-family),
+    var(--titles-font-weight),
+    34px,
+    1.15,
+    0.04em,
+    var(--title-text-color)
+  );
+  text-transform: uppercase;
+}
+
+// .footer__block-two {
+// }
+
+// .footer__social-list {
+// }
+
+// .footer__social-item {
+// }
+
+// .footer__social-link {
+// }
+
+// .footer__social-icon {
+// }
+
+.footer__phone-text {
+  @include fonts(
+    var(--simple-text-font-family),
+    var(--simple-text-font-weight-big),
+    12px,
+    1.83,
+    null,
+    #000000
+  );
+}
+
+.footer__phone-number {
+  @include fonts(
+    var(--simple-text-font-family),
+    var(--simple-text-font-weight-big),
+    12px,
+    1.83,
+    null,
+    var(--accent-text-color)
+  );
+}
+
+.footer__copyright {
+  @include fonts(
+    var(--simple-text-font-family),
+    var(--simple-text-font-weight-big),
+    14px,
+    1.5,
+    null,
+    #907e82
+  );
+}
+
+// fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $font-color)
