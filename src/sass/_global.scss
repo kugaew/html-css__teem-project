@@ -17,11 +17,21 @@ ul {
   padding: 0;
 }
 
-/* body {
-    color: #000000;
-    background-color: #E5E5E5;
-    font-family: ;
-} */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    /* color: #000000; */
+    /* background-color: #E5E5E5; */
+    /* font-family: ; */
+    min-width: $mobile-break-point;
+}
 
 svg {
   fill: currentColor;
