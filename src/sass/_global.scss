@@ -18,19 +18,18 @@ ul {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
 body {
-    /* color: #000000; */
-    /* background-color: #E5E5E5; */
-    /* font-family: ; */
-    min-width: $mobile-break-point;
+  /* color: #000000; */
+  /* background-color: #E5E5E5; */
+  /* font-family: ; */
+  min-width: $mobile-break-point;
 }
 
 svg {
@@ -61,6 +60,20 @@ img {
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
+
+  max-width: $mobile-break-point;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: $tablet-break-point;
+  }
+
+  @include desktop {
+    max-width: $desktop-break-point;
+  }
 }
 
 .section {
