@@ -1,6 +1,1 @@
-$(document).ready(function () {
-  $('.slider').slick({
-    arrows: false,
-    dots: true,
-  });
-});
+new Swiper('.slider__item');
