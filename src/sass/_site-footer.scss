@@ -1,15 +1,17 @@
-.container {
-  outline: 1px solid red;
-}
-
-.footer {
-  background-color: #fff5f6;
-}
-
-// .footer__block-one {
+// .container {
+//   outline: 1px solid red;
 // }
 
-.footer__logo-first {
+.footer-box {
+  background-color: #fff5f6;
+  padding-top: 40px;
+}
+
+.footer-box__block-one {
+  max-width: 232px;
+}
+
+.footer-box__logo-first {
   @include fonts(
     'Titan One',
     var(--titles-font-weight),
@@ -21,9 +23,9 @@
   text-transform: uppercase;
 }
 
-.footer__logo-second {
+.footer-box__logo-second {
   @include fonts(
-    var(--titles-font-family),
+    null,
     var(--titles-font-weight),
     34px,
     1.15,
@@ -31,25 +33,35 @@
     var(--title-text-color)
   );
   text-transform: uppercase;
-  margin: 1px;
+  margin-top: 16px;
 }
 
-// .footer__block-two {
+// .footer-box__block-two {
 // }
 
-// .footer__social-list {
+.footer-box__social-list {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: flex-end;
+}
+
+.footer-box__social-item:not(:first-child) {
+  margin-left: 28px;
+}
+
+// .footer-box__social-link {
 // }
 
-// .footer__social-item {
-// }
+.footer-box__social-icon {
+  fill: #fea5bb;
+  &:hover,
+  &:focus {
+    fill: var(--action-menu-text-color);
+  }
+}
 
-// .footer__social-link {
-// }
-
-// .footer__social-icon {
-// }
-
-.footer__phone-text {
+.footer-box__phone-text {
   @include fonts(
     var(--simple-text-font-family),
     var(--simple-text-font-weight-big),
@@ -58,9 +70,11 @@
     null,
     #000000
   );
+  text-align: right;
+  margin-bottom: 40px;
 }
 
-.footer__phone-number {
+.footer-box__phone-number {
   @include fonts(
     var(--simple-text-font-family),
     var(--simple-text-font-weight-big),
@@ -71,7 +85,15 @@
   );
 }
 
-.footer__copyright {
+.footer-box__copyright-box {
+  height: 60px;
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-box__copyright {
   @include fonts(
     var(--simple-text-font-family),
     var(--simple-text-font-weight-big),
@@ -80,6 +102,7 @@
     null,
     #907e82
   );
+  max-width: 150px;
 }
 
 // fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $font-color)
