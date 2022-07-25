@@ -1,13 +1,33 @@
+// футер
+
 .footer-box {
   background-color: #fff5f6;
   padding-top: 40px;
+  @include desktop {
+    padding-top: 121px;
+  }
+}
+
+.footer-box__blocks {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer-box__block-one {
   max-width: 232px;
+  @include tablet {
+    max-width: 340px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    max-width: 477px;
+  }
 }
 
 .footer-box__logo-first {
+  cursor: pointer;
   @include fonts(
     'Titan One',
     var(--titles-font-weight),
@@ -17,6 +37,12 @@
     var(--title-before-text-color)
   );
   text-transform: uppercase;
+  @include tablet {
+    @include fonts(null, null, 26px, 1.15, 0.04em, null);
+  }
+  @include desktop {
+    @include fonts(null, null, 30px, 1.13, null, null);
+  }
 }
 
 .footer-box__logo-second {
@@ -30,6 +56,14 @@
   );
   text-transform: uppercase;
   margin-top: 16px;
+  display: block;
+
+  @include tablet {
+    @include fonts(null, null, 48px, 1.15, 0.06em, null);
+  }
+  @include desktop {
+    @include fonts(null, null, 58px, 1.14, null, null);
+  }
 }
 
 // .footer-box__block-two {
@@ -68,6 +102,13 @@
   );
   text-align: right;
   margin-bottom: 40px;
+
+  @include tablet {
+    @include fonts(null, null, 14px, 1.86, null, null);
+  }
+  @include desktop {
+    @include fonts(null, null, 16px, 1.86, 0.02em, null);
+  }
 }
 
 .footer-box__phone-number {
@@ -79,14 +120,24 @@
     null,
     var(--accent-text-color)
   );
+  @include tablet {
+    @include fonts(null, null, 14px, 1.86, null, null);
+  }
+  @include desktop {
+    @include fonts(null, null, 16px, 1.86, 0.02em, null);
+  }
 }
 
 .footer-box__copyright-box {
   height: 60px;
   border-top: 1px solid #e1e1e1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  @include tablet {
+    height: 42px;
+    align-items: center;
+  }
 }
 
 .footer-box__copyright {
@@ -99,4 +150,11 @@
     #907e82
   );
   max-width: 150px;
+  margin-bottom: 3px;
+  @include tablet {
+    max-width: 278px;
+    margin-bottom: 0px;
+  }
 }
+
+// fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $font-color)
