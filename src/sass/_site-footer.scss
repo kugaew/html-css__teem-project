@@ -4,6 +4,7 @@
 
 .footer-box {
   background-color: #fff5f6;
+  padding-top: 40px;
 }
 
 .footer-box__block-one {
@@ -38,17 +39,27 @@
 // .footer-box__block-two {
 // }
 
-// .footer-box__social-list {
-// }
+.footer-box__social-list {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: flex-end;
+}
 
-// .footer-box__social-item {
-// }
+.footer-box__social-item:not(:first-child) {
+  margin-left: 28px;
+}
 
 // .footer-box__social-link {
 // }
 
-// .footer-box__social-icon {
-// }
+.footer-box__social-icon {
+  fill: #fea5bb;
+  &:hover,
+  &:focus {
+    fill: var(--action-menu-text-color);
+  }
+}
 
 .footer-box__phone-text {
   @include fonts(
@@ -59,6 +70,8 @@
     null,
     #000000
   );
+  text-align: right;
+  margin-bottom: 40px;
 }
 
 .footer-box__phone-number {
@@ -72,6 +85,14 @@
   );
 }
 
+.footer-box__copyright-box {
+  height: 60px;
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-box__copyright {
   @include fonts(
     var(--simple-text-font-family),
@@ -81,6 +102,7 @@
     null,
     #907e82
   );
+  max-width: 150px;
 }
 
 // fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $font-color)
