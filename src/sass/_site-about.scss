@@ -1,0 +1,196 @@
+.about {
+    background-color: #FFF5F6;
+    background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1));
+}
+
+.about-box {
+    position: relative;
+    background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1));
+}
+
+.about-pre__title {
+    padding-top: 60px;
+    margin-bottom: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var (--title-before-text-color);
+    @include fonts ("Titan One", 400, 18px, 1.16, 00.04em, var (--title-before-text-color));
+
+    @media screen and (min-width: 768px) {
+        @include fonts ("Titan One", 400, 26px, 1.15, 00.04em, var (--title-before-text-color));
+    }
+
+    @media screen and (min-width: 768px) {
+        @include fonts ("Titan One", 400, 30px, 1.13, 00.04em, var (--title-before-text-color));
+    }
+}
+
+
+.about__title {
+    margin-bottom: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    @include fonts ("Titan One", 400, 34px, 1.15, 00.04em, var(--title-text-color));
+
+    @media screen and (min-width: 768px) {
+        @include fonts ("Titan One", 400, 48px, 1.15, 00.04em, var(--title-text-color));
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include fonts ("Titan One", 400, 58px, 1.14, 00.06em, var(--title-text-color));
+        margin-bottom: 60px;
+    }
+}
+
+.about__cow-milk {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-width: 320px) {
+        width: 280px;
+        height: 279px;
+        background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1)),
+            url(../images/about/about-milk-and-cow-mobile-min.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1)),
+                url(../images/about/about-milk-and-cow-mobile@2x-min.png);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+        height: 335px;
+        background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1)),
+            url(../images/about/about-milk-and-cow-tablet-min.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1)),
+                url(../images/about/about-milk-and-cow-tablet@2x-min.png);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 501px;
+        height: 501px;
+        background-image: url(../images/about/about-milk-and-cow-desktop-min.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/about/about-milk-and-cow-desktop@2x-min.png);
+        }
+    }
+}
+
+.about__milk-splash {
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: none;
+    }
+
+    min-width: 1200px;
+    height: 521px;
+    margin: 0;
+    background: #FFF5F6;
+}
+
+.about__text {
+    position: absolute;
+
+    @media screen and (max-width: 767px) {
+        top: 319px;
+        left: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 40px;
+        left: 400px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        top: 90px;
+        left: 616px;
+    }
+}
+
+.about-text__desk {
+    @media screen and (max-width: 767px) {
+        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #000000);
+            max-width: 220px;
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #000000);
+        max-width: 334px;
+        margin-bottom: 22px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include fonts ("DM Sans", 500, 16px, 1.76, 00.04em, #000000);
+        max-width: 463px;
+        margin-bottom: 32px;
+    }
+}
+
+.about-text__lead {
+    @media screen and (max-width: 767px) {
+        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #000000);
+            max-width: 220px;
+            margin-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+        @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #907E82);
+        min-width: 220px;
+    }
+    @media screen and (min-width: 1200px) {
+        @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
+        max-width: 463px;
+    }
+}
+.about-text__tagline {
+    @media screen and (min-width: 768px) {
+        min-width: 334px;
+    }
+
+    @media screen and (min-width: 768px) {
+        min-width: 220px;
+    }
+
+    @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
+}
+
+.about-btn {
+    @include fonts ("DM Sans", 700, 16px, 1.31, 00.004, var(--title-text-color));
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-color: transparent;
+    padding-left: 37px;
+    margin-top: 40px;
+    width: 176px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 22px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 20px;
+    }
+
+}
+.about-btn::after {
+    content: "";
+    margin-left: 13.62px;
+    width: 8px;
+    height: 10px;
+    background-image: url(../images/about/read-more-icon.svg);
+}
