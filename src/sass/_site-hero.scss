@@ -2,12 +2,9 @@ a {
   text-decoration: none;
 }
 
-.section {
-  padding: 0;
-}
-
 .hero-section {
   background-color: #ffb8ca;
+  padding: 0;
 }
 
 .hero {
@@ -98,21 +95,19 @@ a {
   margin-right: 8px;
 }
 
-.hero__btn {
+.hero__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 24px;
   border-radius: 20px;
-  border-style: none;
+  height: 24px;
   min-width: 62.4px;
   background-color: #d41443;
   font-family: 'DM Sans';
   font-weight: 400;
   font-size: 8px;
-  line-height: 10px;
+  line-height: 1.25;
   color: #ffffff;
-
   &:hover,
   &:focus {
     background-color: #ffffff;
@@ -126,7 +121,7 @@ a {
   }
 }
 
-.hero-btn-second {
+.hero__link.link-second {
   min-width: 82.8px;
   @include desktop {
     min-width: 138px;
@@ -161,37 +156,41 @@ a {
   }
 }
 
-// .hero-text-btn {
-//   display: none;
-//   @include tablet {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border-radius: 50%;
-//     border-style: none;
-//     background-color: #ffffff;
-//     margin-left: 184px;
-//     margin-top: 7px;
-//     width: 18px;
-//     height: 18px;
-//   }
-//   @media screen and (max-width: 1199px) {
-//     position: absolute;
-//     bottom: 56px;
-//   }
-//   @include desktop {
-//     margin-left: 229px;
-//     margin-top: 20px;
-//     width: 26px;
-//     height: 26px;
-//   }
-// }
+.hero-text-btn {
+  display: none;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-style: none;
+    background-color: #ffffff;
+    margin-left: 184px;
+    margin-top: 7px;
+    width: 18px;
+    height: 18px;
+  }
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    bottom: 56px;
+  }
+  @include desktop {
+    margin-left: 229px;
+    margin-top: 20px;
+    width: 26px;
+    height: 26px;
+  }
+}
 
-// .hero-text-svg {
-//   @include tablet {
-//     fill: #d41443;
-//   }
-// }
+.hero-text-svg {
+  @include tablet {
+    fill: #d41443;
+  }
+  @include desktop {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 .heroo {
   display: none;
@@ -295,7 +294,7 @@ a {
     width: 30px;
     height: 30px;
     right: 21px;
-    top: 23px;
+    top: 70px;
   }
 }
 
@@ -313,7 +312,7 @@ a {
     width: 30px;
     height: 30px;
     right: 21px;
-    top: 112px;
+    top: 157px;
   }
 }
 
