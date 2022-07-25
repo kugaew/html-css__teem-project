@@ -102,24 +102,31 @@
 
     <ul class="contacts__buttons">
       <li>
-        <button class="contacts__btn-first" type="button">
+        <button
+          class="contacts__btn-first js-open-modal"
+          type="button"
+          data-modal="Our Locations"
+        >
           Our Locations
           <svg class="contacts__but-icon" width="6" height="10">
-            <use href="./images/header/buy-now-icon.svg"></use>
+            <use href="./images/sprite.svg#icon-arrow"></use>
           </svg>
         </button>
       </li>
       <li>
-        <button class="contacts__btn-sec" type="button">
+        <button class="contacts__btn-sec js-open-modal" type="button">
           Franchise
           <svg class="contacts__but-icon" width="6" height="10">
-            <use href="./images/header/buy-now-icon.svg"></use>
+            <use href="./images/sprite.svg#icon-arrow"></use>
           </svg>
         </button>
       </li>
     </ul>
 
-    <div class="contacts-backdrop is-hidden">
+    <div
+      class="contacts-backdrop is-hidden js-modal-close"
+      data-modal="Our Locations"
+    >
       <div class="contacts-modal">
         <ul class="contacts-modal__list">
           <li class="contacts-modal__item">
@@ -158,7 +165,7 @@
         </ul>
         <button class="contacts-modal-but" type="button">
           <svg class="modal-but-icon" width="18" height="18">
-            <use href="./images/header/close-burger-icon.svg"></use>
+            <use href="./images/sprite.svg#icon-close-burger"></use>
           </svg>
         </button>
       </div>
