@@ -58,7 +58,6 @@
 }
 
 .gallery__item:nth-child(4) {
-  border-radius: 5%;
   grid-area: 1/9 / span 8 / span 8;
 }
 
@@ -90,6 +89,11 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
+  
+  @media screen and (min-width: $tablet-break-point) {
+    border-radius: 20px;
+  }
 
   .gallery__item & {
     transform: scale(1);
