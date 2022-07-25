@@ -1,6 +1,6 @@
 .container {
   @media screen and (max-width: 767px) {
-    max-width: 320px;
+    width: 320px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -10,10 +10,6 @@
   }
 }
 
-a {
-  text-decoration: none;
-}
-
 .header {
   background-color: #ffb8ca;
 }
@@ -21,9 +17,20 @@ a {
 .header .container {
   display: flex;
   align-items: center;
-  height: 125px;
+
   @media screen and (max-width: 767px) {
+    padding-top: 8px;
     justify-content: space-between;
+  }
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    padding-top: 37px;
+    padding-bottom: 37px;
   }
 }
 
@@ -39,20 +46,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 199px;
-  height: 50px;
-
-  @media screen and (max-width: 767px) {
-    // padding-top: 8px;
-  }
-
-  @media screen and (min-width: 768px) {
-    // padding-top: 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    // padding-top: 37px;
-  }
 }
 
 .main-nav__list {
@@ -72,8 +65,8 @@ a {
   font-size: 16px;
   line-height: calc(21 / 16);
   color: var(--menu-text-color);
-  padding-top: 52px;
-  padding-bottom: 52px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .main-nav__link--current {
@@ -92,8 +85,11 @@ a {
   line-height: calc(21 / 16);
   color: #d41443;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 44px;
-  padding: 0px 53px;
+  padding: 0px 37px;
   border: 0;
   border-radius: 22px;
   background-color: #ffffff;
@@ -113,6 +109,22 @@ a {
   }
 }
 
+.modal-btn__icon {
+  stroke: var(--accent-text-color);
+
+  @media screen and (max-width: 767px) {
+    margin-left: 16px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+
 .modal-btn--desktop {
   @media screen and (max-width: 767px) {
     display: none;
@@ -120,8 +132,15 @@ a {
 }
 
 .modal-btn--width {
-  width: 100%;
-  margin: 0;
+  margin: auto;
+
+  @media screen and (max-width: 767px) {
+    min-width: 209px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-width: 186px;
+  }
 }
 
 /*-------------------------------МОБИЛЬНОЕ МЕНЮ------------------------------- */
@@ -131,6 +150,7 @@ a {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: #d41443;
 
   @media screen and (min-width: 768px) {
     margin-left: auto;
@@ -161,7 +181,7 @@ a {
   align-items: flex-start;
   position: fixed;
   background-color: #fff;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   right: 0;
   height: 100vh;
@@ -187,8 +207,15 @@ a {
   overflow: auto;
   height: 100%;
   margin-left: auto;
-  min-width: 250px;
+
   width: 100%;
+
+  @media screen and (max-width: 767px) {
+    width: 250px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 254px;
+  }
 }
 
 .mob-nav_list {
