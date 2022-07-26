@@ -5,7 +5,7 @@
 
 .about-box {
     position: relative;
-    background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1));
+    background-color: #FFF5F6;
 }
 
 .about-pre__title {
@@ -13,15 +13,15 @@
     margin-bottom: 16px;
     text-align: center;
     text-transform: uppercase;
-    color: var (--title-before-text-color);
-    @include fonts ("Titan One", 400, 18px, 1.16, 00.04em, var (--title-before-text-color));
+    color: #FFA5BA;
+    @include fonts ("Titan One", 400, 18px, 1.16, 00.04em, #FFA5BA);
 
     @media screen and (min-width: 768px) {
-        @include fonts ("Titan One", 400, 26px, 1.15, 00.04em, var (--title-before-text-color));
+        @include fonts ("Titan One", 400, 26px, 1.15, 00.04em, #FFA5BA);
     }
 
     @media screen and (min-width: 768px) {
-        @include fonts ("Titan One", 400, 30px, 1.13, 00.04em, var (--title-before-text-color));
+        @include fonts ("Titan One", 400, 30px, 1.13, 00.04em, #FFA5BA);
     }
 }
 
@@ -56,6 +56,7 @@
         height: 279px;
         background-image: linear-gradient(rgba(255, 245, 246, 1), rgba(255, 245, 246, 1)),
             url(../images/about/about-milk-and-cow-mobile-min.png);
+
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
@@ -92,8 +93,7 @@
 }
 
 .about__milk-splash {
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (max-width: 1199px) {
         display: none;
     }
 
@@ -101,6 +101,15 @@
     height: 521px;
     margin: 0;
     background: #FFF5F6;
+}
+
+.about__milk-splash-min {
+    position: absolute;
+    top: 390px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .about__text {
@@ -112,7 +121,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        top: 40px;
+        top: 0px;
         left: 400px;
     }
 
@@ -125,8 +134,8 @@
 .about-text__desk {
     @media screen and (max-width: 767px) {
         @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #000000);
-            max-width: 220px;
-        
+        max-width: 220px;
+        margin-bottom: 22px;
     }
 
     @media screen and (min-width: 768px) {
@@ -140,33 +149,44 @@
         max-width: 463px;
         margin-bottom: 32px;
     }
+
 }
 
 .about-text__lead {
     @media screen and (max-width: 767px) {
-        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #000000);
-            max-width: 220px;
-            margin-bottom: 10px;
+        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #907E82);
+        max-width: 220px;
+        margin-bottom: 10px;
     }
+
     @media screen and (min-width: 768px) {
         @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #907E82);
-        min-width: 220px;
+        max-width: 334px;
+        margin-bottom: 15px;
     }
+
+    @media screen and (min-width: 1200px) {
+        @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
+        max-width: 463px;
+        margin-bottom: 20px;
+    }
+}
+
+.about-text__tagline {
+    @media screen and (max-width: 767px) {
+        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #907E82);
+        max-width: 200px;
+    }
+
+    @media screen and (min-width: 768px) {
+        @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #907E82);
+        max-width: 334px;
+    }
+
     @media screen and (min-width: 1200px) {
         @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
         max-width: 463px;
     }
-}
-.about-text__tagline {
-    @media screen and (min-width: 768px) {
-        min-width: 334px;
-    }
-
-    @media screen and (min-width: 768px) {
-        min-width: 220px;
-    }
-
-    @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
 }
 
 .about-btn {
@@ -179,14 +199,20 @@
     margin-top: 40px;
     width: 176px;
     height: 44px;
-    background: #FFFFFF;
+    background-color: var(--main-background-color);
     border-radius: 22px;
 
     @media screen and (max-width: 768px) {
         margin-top: 20px;
     }
-
 }
+
+.about-btn:hover,
+.about-btn:focus {
+    background-color: #ECEBEB;
+    cursor: pointer;
+}
+
 .about-btn::after {
     content: "";
     margin-left: 13.62px;
