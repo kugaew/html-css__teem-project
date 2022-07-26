@@ -1,3 +1,16 @@
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .section-reviews {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -19,9 +32,6 @@
     padding-right: 16px;
     with: 100%;
   }
-}
-
-.slider {
 }
 
 .slider__item {
@@ -59,6 +69,7 @@
     height: 164px;
   }
   @media screen and (min-width: 1200px) {
+    margin-bottom: 16px;
     width: 968px;
     height: 138px;
   }
