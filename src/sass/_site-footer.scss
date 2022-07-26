@@ -13,6 +13,9 @@
     display: flex;
     justify-content: space-between;
   }
+  @include desktop {
+    border-bottom: 1px solid #e1e1e1;
+  }
 }
 
 .footer-box__block-one {
@@ -23,11 +26,11 @@
   }
   @include desktop {
     max-width: 477px;
+    padding-bottom: 60px;
   }
 }
 
 .footer-box__logo-first {
-  cursor: pointer;
   @include fonts(
     'Titan One',
     var(--titles-font-weight),
@@ -60,24 +63,36 @@
 
   @include tablet {
     @include fonts(null, null, 48px, 1.15, 0.06em, null);
+    margin-top: 12px;
   }
   @include desktop {
     @include fonts(null, null, 58px, 1.14, null, null);
   }
 }
 
-// .footer-box__block-two {
-// }
+.footer-box__block-two {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include desktop {
+    padding-top: 0px;
+    padding-bottom: 60px;
+  }
+}
 
 .footer-box__social-list {
   display: flex;
-  margin-top: 40px;
   margin-bottom: 40px;
   justify-content: flex-end;
 }
 
 .footer-box__social-item:not(:first-child) {
   margin-left: 28px;
+  @include tablet {
+    margin-left: 30px;
+  }
 }
 
 // .footer-box__social-link {
@@ -101,7 +116,6 @@
     #000000
   );
   text-align: right;
-  margin-bottom: 40px;
 
   @include tablet {
     @include fonts(null, null, 14px, 1.86, null, null);
@@ -128,15 +142,43 @@
   }
 }
 
-.footer-box__copyright-box {
-  height: 60px;
+.footer-box__line-over {
   border-top: 1px solid #e1e1e1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  width: 100%;
+  padding-bottom: 60px;
+  background-color: #fff5f6;
   @include tablet {
-    height: 42px;
-    align-items: center;
+    padding-bottom: 42px;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.footer-box__copyright-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  // @include tablet {
+  //   height: 42px;
+  //   align-items: center;
+  // }
+  @include desktop {
+    background-color: #fff5f6;
+    height: 36px;
+  }
+}
+
+.abcolute {
+  position: absolute;
+  bottom: -60px;
+  @include tablet {
+    bottom: -34px;
+  }
+  @include desktop {
+    bottom: 4px;
   }
 }
 
@@ -156,5 +198,3 @@
     margin-bottom: 0px;
   }
 }
-
-// fonts($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $font-color)
