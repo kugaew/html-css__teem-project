@@ -100,9 +100,14 @@
 
 .footer-box__social-icon {
   fill: #fea5bb;
+  // @include animated(fill);
   &:hover,
   &:focus {
     fill: var(--action-menu-text-color);
+  }
+  @include tablet {
+    width: 34px;
+    height: 34px;
   }
 }
 
