@@ -1,19 +1,25 @@
-<section class="about">
+<section class="about" id="howmade">
     <div class="container">
         <p class="about-pre__title">tradition and love</p>
         <h2 class="about__title">how it’s made?</h2>
         <div class="about-box">
-            <div class="about__milk-splash">
-                <img src="./images/about/about-milk-background-desktop-min.png" alt="Брызги коровьева молока" />
-            </div>
-            <div class="about__milk-splash-min">
-                <img src="./images/about/about-milk-background-mobile-min.png"
-                    alt="Брызги коровьева молока - маленькие" />
-            </div>
             <div class="about__cow-milk">
-                <img src="./images/about/about-milk-and-cow-desktop-min.png" alt="Корова и кувшин молока" />
+                <picture>
+                    <source srcset="./images/about/about-milk-and-cow-mobile-min.png,
+                                    ./images/about/about-milk-and-cow-mobile@2x-min.png" sizes="280px"
+                        media="(max-width: 767px)">
+                    <source srcset="./images/about/about-milk-and-cow-tablet-min.png,
+                                    ./images/about/about-milk-and-cow-tablet@2x-min.png" sizes="336px"
+                        media="(max-width: 1199px)">
+                    <source srcset="./images/about/about-milk-and-cow-desktop-min.png,
+                                    ./images/about/about-milk-and-cow-desktop@2x-min.png" sizes="501px"
+                        media="(min-width: 1200px)">
+                    <img srcset="./images/about/about-milk-and-cow-desktop-min.png,
+                                    ./images/about/about-milk-and-cow-desktop@2x-min.png"
+                        src="./images/about/about-milk-and-cow-desktop-min.png" alt="Cow and jug of milk">
+                </picture>
             </div>
-            <div class="about__text">
+            <div class="about-text">
                 <p class="about-text__desk">
                     Fusce ut velit laoreet, tempus arcu eu, molestie tortor.
                     Nam vel justo cursus, faucibus lorem eget, egestas eros.
