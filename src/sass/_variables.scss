@@ -18,7 +18,11 @@
     --simple-text-font-weight-big: 700;
     --simple-text-font-weight-medium: 500;
     --simple-text-font-weight-small: 400;
+
 }
- $mobile-break-point: 320px;
- $tablet-break-point: 768px;
- $desktop-break-point: 1200px;
+$mobile-break-point: 320px;
+$tablet-break-point: 768px;
+$desktop-break-point: 1200px;
+ 
+$trans-duration: 250ms;
+$trans-timing: cubic-bezier(0.4, 0, 0.2, 1);
