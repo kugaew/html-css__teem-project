@@ -1151,13 +1151,51 @@ ul {
 /* Костянтин Кечурявий */
 .about {
   background-color: #FFF5F6;
-  background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 245, 246));
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    background-image: url(../images/about/about-milk-background-desktop-min.png);
+    background-size: 1200px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .about {
+    -o-border-image: url(../images/about/about-milk-background-desktop@2x-min.png);
+       border-image: url(../images/about/about-milk-background-desktop@2x-min.png);
+    background-size: 1200px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+  }
 }
 
-.about-box {
-  position: relative;
-  background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 245, 246));
-  background-color: #FFF5F6;
+@media screen and (min-width: 768px) {
+  .about-box {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-text {
+    background-image: url(../images/about/about-milk-background-mobile-min.png);
+    background-size: 280px;
+    background-position: 0 72px;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .about-text {
+    background-image: url(../images/about/about-milk-background-mobile@2x-min.png);
+    background-size: 280px;
+    background-position: 0 72px;
+    background-repeat: no-repeat;
+  }
 }
 
 .about-pre__title {
@@ -1225,95 +1263,6 @@ ul {
     letter-spacing: 0.06em;
     color: var(--title-text-color);
     margin-bottom: 60px;
-  }
-}
-
-.about__cow-milk {
-  position: absolute;
-  top: 0;
-  left: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media screen and (min-width: 320px) {
-  .about__cow-milk {
-    width: 280px;
-    height: 279px;
-    background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 245, 246)), url(../images/about/about-milk-and-cow-mobile-min.png);
-  }
-}
-@media screen and (min-width: 320px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 320px) and (min-resolution: 192dpi), screen and (min-width: 320px) and (min-resolution: 2dppx) {
-  .about__cow-milk {
-    background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 245, 246)), url(../images/about/about-milk-and-cow-mobile@2x-min.png);
-  }
-}
-@media screen and (min-width: 768px) {
-  .about__cow-milk {
-    width: 336px;
-    height: 335px;
-    background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 245, 246)), url(../images/about/about-milk-and-cow-tablet-min.png);
-  }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .about__cow-milk {
-    background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 245, 246)), url(../images/about/about-milk-and-cow-tablet@2x-min.png);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .about__cow-milk {
-    width: 501px;
-    height: 501px;
-    background-image: url(../images/about/about-milk-and-cow-desktop-min.png);
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .about__cow-milk {
-    background-image: url(../images/about/about-milk-and-cow-desktop@2x-min.png);
-  }
-}
-
-.about__milk-splash {
-  min-width: 1200px;
-  height: 521px;
-  margin: 0;
-  background: #FFF5F6;
-}
-@media screen and (max-width: 1199px) {
-  .about__milk-splash {
-    display: none;
-  }
-}
-
-.about__milk-splash-min {
-  position: absolute;
-  top: 390px;
-}
-@media screen and (min-width: 768px) {
-  .about__milk-splash-min {
-    display: none;
-  }
-}
-
-.about__text {
-  position: absolute;
-}
-@media screen and (max-width: 767px) {
-  .about__text {
-    top: 319px;
-    left: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .about__text {
-    top: 0px;
-    left: 400px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .about__text {
-    top: 90px;
-    left: 616px;
   }
 }
 
@@ -1442,17 +1391,16 @@ ul {
   height: 44px;
   background-color: var(--main-background-color);
   border-radius: 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about-btn:hover, .about-btn:focus {
+  background-color: #ECEBEB;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .about-btn {
     margin-top: 20px;
   }
-}
-
-.about-btn:hover,
-.about-btn:focus {
-  background-color: #ECEBEB;
-  cursor: pointer;
 }
 
 .about-btn::after {
