@@ -1,7 +1,7 @@
 // футер
 
 .footer-box {
-  background-color: #fff5f6;
+  background-color: var(--footer-bg-color);
   padding-top: 40px;
   @include desktop {
     padding-top: 121px;
@@ -27,6 +27,11 @@
   @include desktop {
     max-width: 477px;
     padding-bottom: 60px;
+  }
+  @include animated(transform);
+  &:hover,
+  &:focus {
+    transform: scale(0.9);
   }
 }
 
@@ -95,12 +100,13 @@
   }
 }
 
-// .footer-box__social-link {
-// }
+.footer-box__social-link {
+  display: flex;
+}
 
 .footer-box__social-icon {
   fill: #fea5bb;
-  // @include animated(fill);
+  @include animated(fill);
   &:hover,
   &:focus {
     fill: var(--action-menu-text-color);
@@ -139,6 +145,12 @@
     null,
     var(--accent-text-color)
   );
+  @include animated(color);
+  &:hover,
+  &:focus {
+    color: var(--title-before-text-color);
+  }
+
   @include tablet {
     @include fonts(null, null, 14px, 1.86, null, null);
   }
@@ -166,10 +178,6 @@
   text-align: center;
   position: relative;
 
-  // @include tablet {
-  //   height: 42px;
-  //   align-items: center;
-  // }
   @include desktop {
     background-color: #fff5f6;
     height: 36px;
