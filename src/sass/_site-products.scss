@@ -3,13 +3,13 @@ ul {
     margin: 0;
     padding-left: 0;
 }
-.product-section {
-    padding-top: 60px;
-    @include mobile {
-        padding-bottom: 0;
-    }
-    // padding-bottom: 60px;
-}
+// .product-section {
+//     padding-top: 60px;
+//     @include mobile {
+//         padding-bottom: 0;
+//     }
+//     // padding-bottom: 60px;
+// }
 .product-container {
     width: 100%;
     margin-left: auto;
@@ -108,7 +108,6 @@ ul {
     @media screen and (min-width: 1200px) {
         padding: 165px 62px 60px 61px;
         max-width: 368px;
-        margin-bottom: 0;
     }
 }
 
