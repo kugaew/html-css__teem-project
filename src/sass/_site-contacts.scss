@@ -429,7 +429,8 @@
   margin-bottom: 10px;
 }
 
-.contacts-franchise-input:hover {
+.contacts-franchise-input:hover,
+.contacts-franchise-input:focus {
   border-color: var(--accent-text-color);
 }
 .contacts__btn-form {
