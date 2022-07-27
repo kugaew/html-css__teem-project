@@ -30,7 +30,7 @@
   }
   @include animated(transform);
   &:hover,
-  &:focus {
+  &:focus-within {
     transform: scale(0.9);
   }
 }
@@ -104,13 +104,16 @@
   display: flex;
 }
 
+.footer-box__social-link:hover .footer-box__social-icon,
+.footer-box__social-link:focus .footer-box__social-icon {
+  fill: var(--action-menu-text-color);
+  // @include animated(transform);
+  // transform: scale(0.9);
+}
+
 .footer-box__social-icon {
   fill: #fea5bb;
   @include animated(fill);
-  &:hover,
-  &:focus {
-    fill: var(--action-menu-text-color);
-  }
   @include tablet {
     width: 34px;
     height: 34px;
