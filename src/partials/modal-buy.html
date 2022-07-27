@@ -1,0 +1,80 @@
+<div class="buynow__backdrop is-hidden" data-modal>
+  <div class="buynow__modal">
+    <button
+      class="buynow__close-button js-close-buynow"
+      type="button"
+      data-modal-close
+    >
+      <svg width="14" height="14">
+        <use href="./images/sprite.svg#icon-close-burger"></use>
+      </svg>
+    </button>
+
+    <form class="buynow__form">
+      <p class="buynow__form--caption">Leave your order details</p>
+      <p class="buynow__form--subcaption">We'll call you back</p>
+      <div class="buynow__box">
+        <div class="buynow__field">
+          <label class="buynow__label--style" for="user-name">First Name</label>
+          <input class="buynow__input" type="text" name="name" id="user-name" />
+        </div>
+
+        <div class="buynow__field">
+          <label class="buynow__label--style" for="tel">Telephone</label>
+          <input class="buynow__input" type="tel" name="tel" id="tel" />
+        </div>
+      </div>
+      <label class="buynow__label--style" for="comment">Your address</label>
+      <div class="buynow__field buynow__field--text">
+        <textarea
+          class="buynow__text"
+          name="comment"
+          id="comment"
+          rows="10"
+          placeholder="City, street, house, appartment etc."
+        ></textarea>
+      </div>
+      <div class="buynow__select">
+        <label class="buynow__label--style" for="size"
+          >Ice cream (amount)</label
+        >
+        <select class="buynow__input" id="size" name="size">
+          <option value="0" selected>0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="buynow__select">
+        <label class="buynow__label--style" for="size"
+          >Ice coffee (amount)</label
+        >
+        <select class="buynow__input" id="size" name="size">
+          <option value="0" selected>0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="buynow__select">
+        <label class="buynow__label--style" for="size"
+          >Milkshakes (amount)</label
+        >
+        <select class="buynow__input" id="size" name="size">
+          <option value="0" selected>0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <button type="submit" class="buynow__submit">Сonfirm</button>
+    </form>
+  </div>
+</div>
