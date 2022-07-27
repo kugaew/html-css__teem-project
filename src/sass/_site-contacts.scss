@@ -191,7 +191,8 @@
     margin-top: 60px;
   }
 }
-.contacts__btn-first {
+.contacts__btn-first,
+.contacts__btn-form {
   margin-left: auto;
   margin-right: auto;
   width: 161.45px;
@@ -258,7 +259,8 @@
   }
 }
 
-.contacts-backdrop {
+.contacts-backdrop,
+.contacts-franchise-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -273,13 +275,15 @@
   overflow-y: scroll;
 }
 
-.contacts-backdrop.is-hidden {
+.contacts-backdrop.is-hidden,
+.contacts-franchise-backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.contacts-modal {
+.contacts-modal,
+.contacts-franchise-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -288,15 +292,12 @@
   z-index: 4;
   width: 310px;
   height: 581px;
-  background-color: #ffffff;
+  background-color: var(--title-before-text-color);
   padding: 40px 20px;
   overflow: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  .contacts-backdrop.is-hidden & {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
 
   @include tablet {
     width: 602px;
@@ -304,8 +305,18 @@
   }
 }
 
-.contacts-modal__text {
-  font-weight: 700;
+.contacts-backdrop.is-hidden .contacts-modal {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.contacts-franchise-backdrop.is-hidden .contacts-franchise-modal {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.contacts-modal__text,
+.contacts-franchise-modal__text {
+  font-family: 'Titan One';
+  font-weight: 500;
   font-size: 15px;
   line-height: 1.5;
   text-align: center;
@@ -322,7 +333,8 @@
   }
 }
 
-.contacts-modal-but {
+.contacts-modal-but,
+.contacts-modal-franchise-but {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -353,4 +365,75 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.contacts-franchise-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts-franchise-modal-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+.contacts-franchise-modal-text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+
+.contacts-franchise-modal-number {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.52;
+
+  letter-spacing: 0.04em;
+  color: var(--accent-text-color);
+  margin-right: 10px;
+
+  @include desktop {
+    font-size: 18px;
+    line-height: 1.76;
+  }
+}
+
+.contacts-franchise-modal-list {
+  margin-bottom: 30px;
+}
+
+.contacts-franchise-form {
+  display: block;
+  width: 100%;
+}
+.contacts-franchise-input {
+  display: block;
+  width: 100%;
+  color: #d41342;
+  border: 2px solid #ffa5ba;
+  border-radius: 22px;
+  outline: #0000;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.contacts-franchise-input:hover,
+.contacts-franchise-input:focus {
+  border-color: var(--accent-text-color);
+}
+.contacts__btn-form {
+  display: block;
+  margin: 0 auto;
 }
