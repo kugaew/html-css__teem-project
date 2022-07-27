@@ -247,15 +247,6 @@ a {
   }
 }
 
-@keyframes ice-cream {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 636px;
-  }
-}
-
 .hero-img-ice {
   position: absolute;
   bottom: 0;
@@ -263,9 +254,6 @@ a {
   z-index: 1;
   width: 171px;
   height: 410px;
-  animation-name: ice-cream;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
   @include tablet {
     width: 143px;
     height: 336px;
