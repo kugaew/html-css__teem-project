@@ -1,177 +1,351 @@
 .about {
-    background-color: #FFF5F6;
-    margin: 0 auto;
-    width: 100%;
+  background-color: #fff5f6;
+  margin: 0 auto;
+  width: 100%;
 
-    @media screen and (min-width: 1200px) {
-        background-image: url(../images/about/about-milk-background-desktop-min.png);
-        background-size: 1200px;
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/about/about-milk-background-desktop-min.png);
+    background-size: 1200px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
 
-        @include retina {
-            border-image: url(../images/about/about-milk-background-desktop@2x-min.png);
-            background-size: 1200px;
-            background-position: 50% 100%;
-            background-repeat: no-repeat;
-        }
+    @include retina {
+      border-image: url(../images/about/about-milk-background-desktop@2x-min.png);
+      background-size: 1200px;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
     }
+  }
 }
 
 .about-box {
-    @media screen and (min-width: 768px) {
-        display: flex;
-        gap: 32px;
-        align-items: center;
-        justify-content: space-between;
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .about-text {
-    @media screen and (max-width: 767px) {
-        background-image: url(../images/about/about-milk-background-mobile-min.png);
-        background-size: 280px;
-        background-position: 0 72px;
-        background-repeat: no-repeat;
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/about/about-milk-background-mobile-min.png);
+    background-size: 280px;
+    background-position: 0 72px;
+    background-repeat: no-repeat;
 
-        @include retina {
-            background-image: url(../images/about/about-milk-background-mobile@2x-min.png);
-            background-size: 280px;
-            background-position: 0 72px;
-            background-repeat: no-repeat;
-        }
+    @include retina {
+      background-image: url(../images/about/about-milk-background-mobile@2x-min.png);
+      background-size: 280px;
+      background-position: 0 72px;
+      background-repeat: no-repeat;
     }
+  }
 }
 
 .about-pre__title {
-    padding-top: 60px;
-    margin-bottom: 16px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFA5BA;
-    @include fonts ("Titan One", 400, 18px, 1.16, 00.04em, #FFA5BA);
+  padding-top: 60px;
+  margin-bottom: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  @include fonts('Titan One', 400, 18px, 1.16, 00.04em, #ffa5ba);
 
-    @media screen and (min-width: 768px) {
-        @include fonts ("Titan One", 400, 26px, 1.15, 00.04em, #FFA5BA);
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts('Titan One', 400, 26px, 1.15, 00.04em, #ffa5ba);
+  }
 
-    @media screen and (min-width: 768px) {
-        @include fonts ("Titan One", 400, 30px, 1.13, 00.04em, #FFA5BA);
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts('Titan One', 400, 30px, 1.13, 00.04em, #ffa5ba);
+  }
 }
 
 .about__title {
-    margin-bottom: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    @include fonts ("Titan One", 400, 34px, 1.15, 00.04em, var(--title-text-color));
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  @include fonts(
+    'Titan One',
+    400,
+    34px,
+    1.15,
+    00.04em,
+    var(--title-text-color)
+  );
 
-    @media screen and (min-width: 768px) {
-        @include fonts ("Titan One", 400, 48px, 1.15, 00.04em, var(--title-text-color));
-        margin-bottom: 40px;
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts(
+      'Titan One',
+      400,
+      48px,
+      1.15,
+      00.04em,
+      var(--title-text-color)
+    );
+    margin-bottom: 40px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        @include fonts ("Titan One", 400, 58px, 1.14, 00.06em, var(--title-text-color));
-        margin-bottom: 60px;
-    }
+  @media screen and (min-width: 1200px) {
+    @include fonts(
+      'Titan One',
+      400,
+      58px,
+      1.14,
+      00.06em,
+      var(--title-text-color)
+    );
+    margin-bottom: 60px;
+  }
 }
 
 .about-text__desk {
-    @media screen and (max-width: 767px) {
-        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #000000);
-        max-width: 220px;
-        margin-bottom: 22px;
-    }
+  @media screen and (max-width: 767px) {
+    @include fonts('DM Sans', 500, 12px, 1.6, 00.04em, #000000);
+    max-width: 220px;
+    margin-bottom: 22px;
+  }
 
-    @media screen and (min-width: 768px) {
-        @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #000000);
-        max-width: 334px;
-        margin-bottom: 22px;
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts('DM Sans', 500, 14px, 1.77, 00.04em, #000000);
+    max-width: 334px;
+    margin-bottom: 22px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        @include fonts ("DM Sans", 500, 16px, 1.76, 00.04em, #000000);
-        max-width: 463px;
-        margin-bottom: 32px;
-    }
+  @media screen and (min-width: 1200px) {
+    @include fonts('DM Sans', 500, 16px, 1.76, 00.04em, #000000);
+    max-width: 463px;
+    margin-bottom: 32px;
+  }
 }
 
 .about-text__lead {
-    @media screen and (max-width: 767px) {
-        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #907E82);
-        max-width: 220px;
-        margin-bottom: 10px;
-    }
+  @media screen and (max-width: 767px) {
+    @include fonts('DM Sans', 500, 12px, 1.6, 00.04em, #907e82);
+    max-width: 220px;
+    margin-bottom: 10px;
+  }
 
-    @media screen and (min-width: 768px) {
-        @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #907E82);
-        max-width: 334px;
-        margin-bottom: 15px;
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts('DM Sans', 500, 14px, 1.77, 00.04em, #907e82);
+    max-width: 334px;
+    margin-bottom: 15px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
-        max-width: 463px;
-        margin-bottom: 20px;
-    }
+  @media screen and (min-width: 1200px) {
+    @include fonts('DM Sans', 500, 14px, 1.94, 00.04em, #907e82);
+    max-width: 463px;
+    margin-bottom: 20px;
+  }
 }
 
 .about-text__tagline {
-    @media screen and (max-width: 767px) {
-        @include fonts ("DM Sans", 500, 12px, 1.6, 00.04em, #907E82);
-        max-width: 200px;
-    }
+  @media screen and (max-width: 767px) {
+    @include fonts('DM Sans', 500, 12px, 1.6, 00.04em, #907e82);
+    max-width: 200px;
+  }
 
-    @media screen and (min-width: 768px) {
-        @include fonts ("DM Sans", 500, 14px, 1.77, 00.04em, #907E82);
-        max-width: 334px;
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts('DM Sans', 500, 14px, 1.77, 00.04em, #907e82);
+    max-width: 334px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        @include fonts ("DM Sans", 500, 14px, 1.94, 00.04em, #907E82);
-        max-width: 463px;
-    }
+  @media screen and (min-width: 1200px) {
+    @include fonts('DM Sans', 500, 14px, 1.94, 00.04em, #907e82);
+    max-width: 463px;
+  }
 }
 
 .about-btn {
-    @include fonts ("DM Sans", 700, 16px, 1.31, 00.004, var(--title-text-color));
-    display: flex;
-    text-align: center;
-    align-items: center;
-    border-color: transparent;
-    padding-left: 37px;
-    margin-top: 40px;
-    width: 176px;
-    height: 44px;
-    background-color: var(--main-background-color);
-    border-radius: 22px;
-    transition: background-color 250ms cubic-bezier(.4, 0, .2, 1);
+  @include fonts('DM Sans', 700, 16px, 1.31, 00.004, var(--title-text-color));
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-color: transparent;
+  padding-left: 37px;
+  margin-top: 40px;
+  width: 176px;
+  height: 44px;
+  background-color: var(--main-background-color);
+  border-radius: 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-        background-color: #ECEBEB;
-        cursor: pointer;
-    }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    cursor: pointer;
+  }
 
-    @media screen and (max-width: 768px) {
-        margin-top: 20px;
-    }
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
 }
 
 .about-btn::after {
-    content: "";
-    margin-left: 13.62px;
-    width: 8px;
-    height: 10px;
-    background-image: url(../images/about/read-more-icon.svg);
+  content: '';
+  margin-left: 13.62px;
+  width: 8px;
+  height: 10px;
+  background-image: url(../images/about/read-more-icon.svg);
 }
 
 .about .about__cow-milk:hover {
-    transform: scale(1.25);
-    transition: transform 250ms cubic-bezier(.4, 0, .2, 1);
+  transform: scale(1.25);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about__cow-milk {
-    transition: transform 250ms cubic-bezier(.4, 0, .2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 550ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px 94px 15px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 208px 159px 207px 159px;
+    overflow-y: scroll;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 10px solid #00000024;
+
+  @media screen and (max-width: 767px) {
+    width: 310px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 432px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 532px;
+  }
+
+  border-radius: 24px;
+  padding: 20px;
+
+  @media screen and (max-width: 767px) {
+    min-height: 400px;
+  }
+
+  min-height: 500px;
+  background: #ffa5ba;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 550ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0000001a;
+    border-radius: 50%;
+    fill: var(--title-text-color);
+    background-color: #ffffff;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+      fill: var(--title-text-color);
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.close-black-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--title-text-color);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: rotate(90deg);
+    fill: var(--title-text-color);
+  }
+}
+
+.modal__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  @include fonts(
+    'Titan One',
+    400,
+    34px,
+    1.15,
+    00.04em,
+    var(--title-text-color)
+  );
+
+  @media screen and (min-width: 768px) {
+    @include fonts(
+      'Titan One',
+      400,
+      48px,
+      1.15,
+      00.04em,
+      var(--title-text-color)
+    );
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(
+      'Titan One',
+      400,
+      58px,
+      1.14,
+      00.06em,
+      var(--title-text-color)
+    );
+    margin-bottom: 60px;
+  }
+}
+
+.modal__text {
+  text-align: justify;
+  text-transform: uppercase;
+  color: #ffffff;
+  @include fonts('Titan One', 400, 18px, 1.16, 00.04em, #ffffff);
+  padding-top: 15px;
+
+  @media screen and (min-width: 768px) {
+    @include fonts('Titan One', 400, 26px, 1.15, 00.04em, #ffffff);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fonts('Titan One', 400, 30px, 1.13, 00.04em, #ffffff);
+  }
 }
