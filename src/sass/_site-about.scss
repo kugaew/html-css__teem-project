@@ -166,3 +166,12 @@
     height: 10px;
     background-image: url(../images/about/read-more-icon.svg);
 }
+
+.about .about__cow-milk:hover {
+    transform: scale(1.25);
+    transition: transform 250ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.about__cow-milk {
+    transition: transform 250ms cubic-bezier(.4, 0, .2, 1);
+}
