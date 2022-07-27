@@ -1,9 +1,12 @@
-<header class="header" id="header">
+<section class="header" id="header">
   <div class="container">
     <a class="logo" id="logo" href="index.html">
       <picture>
         <source
-          srcset="./images/header/logo-min.png, ./images/header/logo@2x-min.png"
+          srcset="
+            ./images/header/logo-min.png    1x,
+            ./images/header/logo@2x-min.png 2x
+          "
           media="(min-width: 320px)"
         />
         <img
@@ -18,6 +21,8 @@
         <use href="./images/sprite.svg#icon-open-burger"></use>
       </svg>
     </button>
+
+    <!-- Мобильное меню -->
     <div class="mob-nav is-hidden">
       <button class="close-open-btn" type="button">
         <svg class="menu-open-btn__icon" width="14" height="14">
@@ -39,7 +44,7 @@
             <a class="mob-nav__link" href="#advantages">About us</a>
           </li>
           <li class="mob-nav__item">
-            <a class="mob-nav__link" href="#about">How it’s made?</a>
+            <a class="mob-nav__link" href="#howmade">How it’s made?</a>
           </li>
           <li class="mob-nav__item">
             <a class="mob-nav__link" href="#products">Our products</a>
@@ -50,6 +55,8 @@
         </ul>
       </div>
     </div>
+
+    <!-- Главное меню -->
     <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -61,7 +68,7 @@
           <a class="main-nav__link" href="#advantages">About us</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#about">How it’s made?</a>
+          <a class="main-nav__link" href="#howmade">How it’s made?</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#products">Our products</a>
@@ -71,11 +78,11 @@
         </li>
       </ul>
     </nav>
-    <button class="modal-btn modal-btn--desktop" type="button">
+    <button class="modal-btn modal-btn--desktop js-open-buynow" type="button">
       Buy now
       <svg class="modal-btn__icon" width="6" height="10">
         <use href="./images/sprite.svg#icon-arrow"></use>
       </svg>
     </button>
   </div>
-</header>
+</section>
