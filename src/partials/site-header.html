@@ -16,7 +16,12 @@
         />
       </picture>
     </a>
-    <button class="menu-open-btn" type="button" name="open-menu">
+    <button
+      class="menu-open-btn"
+      type="button"
+      name="open-menu"
+      aria-label="open"
+    >
       <svg class="menu-open-btn__icon" width="20" height="12">
         <use href="./images/sprite.svg#icon-open-burger"></use>
       </svg>
@@ -24,13 +29,23 @@
 
     <!-- Мобильное меню -->
     <div class="mob-nav is-hidden">
-      <button class="close-open-btn" type="button" name="close-menu">
+      <button
+        class="close-open-btn"
+        type="button"
+        name="close-menu"
+        aria-label="close"
+      >
         <svg class="menu-open-btn__icon" width="14" height="14">
           <use href="./images/sprite.svg#icon-close-burger"></use>
         </svg>
       </button>
       <div class="mob-nav__container">
-        <button class="modal-btn modal-btn--width" type="button" name="buy-now">
+        <button
+          class="modal-btn modal-btn--width"
+          type="button"
+          name="buy-now"
+          aria-label="open-buy-now"
+        >
           Buy now
           <svg class="modal-btn__icon" width="6" height="10">
             <use href="./images/sprite.svg#icon-arrow"></use>
@@ -82,6 +97,7 @@
       class="modal-btn modal-btn--desktop js-open-buynow"
       type="button"
       name="buy-now-open"
+      aria-label="open-buy-now"
     >
       Buy now
       <svg class="modal-btn__icon" width="6" height="10">
