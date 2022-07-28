@@ -223,7 +223,7 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: var(--accent-text-color);
+  background-color: #d4144373;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -231,6 +231,6 @@
 }
 
 .myBtn:hover {
-  background-color: var(--title-before-text-color);
+  background-color: #d4144373;
   color: var(--accent-text-color);
 }
