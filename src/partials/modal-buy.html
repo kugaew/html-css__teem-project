@@ -3,6 +3,7 @@
     <button
       class="buynow__close-button js-close-buynow"
       type="button"
+      aria-label="close"
       data-modal-close
     >
       <svg width="14" height="14">
@@ -51,7 +52,11 @@
         <label class="buynow__label--style" for="ice-coffee-size"
           >Ice coffee (amount)</label
         >
-        <select class="buynow__input" id="ice-coffee-size" name="ice-coffee-size">
+        <select
+          class="buynow__input"
+          id="ice-coffee-size"
+          name="ice-coffee-size"
+        >
           <option value="0" selected>0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -74,7 +79,9 @@
         </select>
       </div>
 
-      <button type="submit" class="buynow__submit">Сonfirm</button>
+      <button type="submit" class="buynow__submit" aria-label="confirm">
+        Сonfirm
+      </button>
     </form>
   </div>
 </div>
