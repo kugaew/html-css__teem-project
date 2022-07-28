@@ -63,7 +63,7 @@
 
 .main-nav__item {
   transform: scale(1);
-  @include animated(scale);
+  @include animated(transform);
 }
 
 .main-nav__item:hover,
